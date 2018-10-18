@@ -1,0 +1,2 @@
+tccProviderFilter=com.jaspercloud.tcc.core.dubbo.filter.TccProviderFilter
+tccConsumerFilter=com.jaspercloud.tcc.core.dubbo.filter.TccConsumerFilter
