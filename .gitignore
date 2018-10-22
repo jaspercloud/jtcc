@@ -21,3 +21,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/tcc-demo-micro/tcc-demo-api/target
+/tcc-demo-micro/tcc-demo-account/target
+/tcc-demo-micro/tcc-demo-inventory/target
+/tcc-demo-micro/tcc-demo-order/target
+/.idea
+/tcc-client/target
+/tcc-core/target
+/tcc-dubbo-demo/target
+/tcc-server/target
