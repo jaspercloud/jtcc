@@ -19,6 +19,9 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 
+/**
+ * TCC事务执行
+ */
 @Component
 public class TccMethodInterceptor implements MethodInterceptor, InitializingBean, Serializable {
 
@@ -49,7 +52,7 @@ public class TccMethodInterceptor implements MethodInterceptor, InitializingBean
         if (null != tccMethod) {
             result = invokeTryMethod(tccMethod, invocation);
         } else {
-            result = invokeCompleteMethod(invocation);
+            result = invokeCCMethod(invocation);
         }
         return result;
     }
@@ -97,7 +100,14 @@ public class TccMethodInterceptor implements MethodInterceptor, InitializingBean
         }
     }
 
-    private Object invokeCompleteMethod(MethodInvocation invocation) throws Throwable {
+    /**
+     * Confirm/Cancel
+     *
+     * @param invocation
+     * @return
+     * @throws Throwable
+     */
+    private Object invokeCCMethod(MethodInvocation invocation) throws Throwable {
         TccContext tccContext = TccContext.get();
         Method method = invocation.getMethod();
         TccPlatformTransactionManager transactionManager = transactionManagerCache.getTransactionManager(method);

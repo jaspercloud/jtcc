@@ -28,6 +28,10 @@ public class TccMethodInvokerFactoryBean implements FactoryBean<TccMethodInvoker
     private BeanFactory beanFactory;
     private TccMethodInvoker tccMethodInvoker;
 
+    public String getUniqueName() {
+        return uniqueName;
+    }
+
     public void setTryMethod(Method tryMethod) {
         this.tryMethod = tryMethod;
     }

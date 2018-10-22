@@ -6,6 +6,9 @@ import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * Tcc事务幂等
+ */
 @Component
 public class TccIdempotentInterceptor implements MethodInterceptor {
 

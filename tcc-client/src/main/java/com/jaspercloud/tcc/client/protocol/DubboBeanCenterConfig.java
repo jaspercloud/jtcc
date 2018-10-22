@@ -1,4 +1,4 @@
-package com.jaspercloud.tcc.client.autoconfig;
+package com.jaspercloud.tcc.client.protocol;
 
 import com.alibaba.dubbo.config.MethodConfig;
 import com.alibaba.dubbo.config.spring.ReferenceBean;
