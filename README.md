@@ -1,1 +1,1 @@
-# jtcc
+# Tcc transaction coordinator
