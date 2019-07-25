@@ -149,8 +149,7 @@ public class RedisTccTransactionRepository implements TccTransactionRepository, 
                 String tid = parseTid(redisKey);
                 return tid;
             }
-        }).map(new Function<String, TccTransactionInfo
-                >() {
+        }).map(new Function<String, TccTransactionInfo>() {
             @Override
             public TccTransactionInfo apply(String tid) {
                 TccTransactionInfo info = getTccTransactionInfo(tid);
